@@ -16,11 +16,11 @@ services-camps.html
 services-community-access.html
 services-personal-support.html
 pathways.html                   "Our journey with you" steps
-queensland.html                 Service area page
 careers.html                    "Join Our Team"
 css/style.css                   All styles
 js/main.js                      Mobile menu + contact form behaviour
-assets/logo.svg                 Placeholder logo
+assets/logo-full.png            Real logo (icon + wordmark), used in header/footer
+assets/logo-icon.png            Icon-only mark, used as the favicon
 ```
 
 ## Running it locally
@@ -36,13 +36,10 @@ then visit http://localhost:8000
 
 ## Things to update before going live
 
-1. **Logo** — replace `assets/logo.svg` with your real logo (keep the
-   filename, or update the `<img src="assets/logo.svg">` references across
-   all pages).
-2. **Contact details** — phone number, email, and ABN are placeholders
-   (`1300 000 000`, `info@activelifesupportservices.com.au`,
-   `[Add your ABN]`) in the footer of every page and on `contact.html`.
-   Find/replace these with your real details.
+1. **Phone number** — currently shows "Coming soon" in the footer and on
+   `contact.html`. Once you have a number, replace those and add a
+   `tel:` link.
+2. **ABN** — currently `[Add your ABN]` in the footer of every page.
 3. **Photos** — every `.media-block` div is a coloured placeholder standing
    in for a photo. Swap them for `<img>` tags (or CSS `background-image`)
    once you have photography to use.
