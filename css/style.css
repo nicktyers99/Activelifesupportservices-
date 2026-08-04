@@ -443,6 +443,14 @@ p { margin: 0 0 16px; color: var(--color-text-muted); }
   z-index: 1;
 }
 
+.media-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
 .media-block.tone-1 { background: linear-gradient(135deg, #1f5fb0, #0d1b2f); }
 .media-block.tone-2 { background: linear-gradient(135deg, #3a4a63, #10131a); }
 .media-block.tone-3 { background: linear-gradient(135deg, #e8752c, #40230c); }
