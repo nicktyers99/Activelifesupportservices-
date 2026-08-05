@@ -325,23 +325,47 @@ p { margin: 0 0 16px; color: var(--color-text-muted); }
 .hero {
   position: relative;
   color: var(--color-white);
-  background: url('../assets/hero-collage.jpg') center center / cover no-repeat,
-    linear-gradient(160deg, #1a2230 0%, #0d0d0f 55%, #000000 100%);
+  background: linear-gradient(160deg, #1a2230 0%, #0d0d0f 55%, #000000 100%);
   padding: 90px 0 60px;
   overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url('../assets/hero-collage.jpg');
+  background-repeat: no-repeat;
+  background-position: 100% center;
+  background-size: auto 115%;
+  animation: hero-pan 50s ease-in-out infinite alternate;
+}
+
+@media (min-width: 640px) {
+  .hero-bg { background-size: auto 160%; }
+}
+
+@keyframes hero-pan {
+  0% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg { animation: none; background-position: center center; }
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 1;
   background:
     radial-gradient(circle at 15% 20%, rgba(31,95,176,0.35), transparent 45%),
     radial-gradient(circle at 85% 75%, rgba(232,117,44,0.25), transparent 50%);
   pointer-events: none;
 }
 
-.hero .container { position: relative; }
+.hero .container { position: relative; z-index: 2; }
 
 .hero h1 {
   font-size: clamp(2.3rem, 6vw, 3.6rem);
