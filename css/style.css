@@ -337,7 +337,7 @@ p { margin: 0 0 16px; color: var(--color-text-muted); }
   background-image: url('../assets/hero-collage.jpg');
   background-repeat: no-repeat;
   background-position: 100% center;
-  background-size: 230% 100%;
+  background-size: auto 160%;
   animation: hero-pan 50s ease-in-out infinite alternate;
 }
 
